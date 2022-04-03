@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background-color: hsl(222, 21%, 19%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 300px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head {
+    position: relative;
+    background-color: hsl(20, 44%, 85%);
+    width: 9em;
+    height: 15em;
+    border-radius: 5em;
+    border: 0.2em solid hsl(245, 32%, 8%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.head::before,
+.head::after {
+    position: absolute;
+    content: '';
+    width: 0.75em;
+    height: 1.25em;
+    background-color: hsl(20, 44%, 85%);
+    border: 0.2em solid hsl(245, 32%, 8%);
+    border-radius: 100% 0 0 100%;
+    transform: translate(-4.88em, 2.2em);
+}
+.head::after {
+    transform: rotate(180deg) translate(-4.88em, -2.25em);
+}
+.eyebrow {
+    width: 7em;
+    height: 1em;
+    background-color: hsl(193, 89%, 85%);
+    border-radius: 1000% 10em 10em 1000%;
+    border: 0.1em solid hsl(245, 32%, 8%);
+    transform: translateX(-1.5em);
+}
+.eyes {
+    display: flex;
+}
+.eye {
+    background-color: white;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 100%;
+    border: 0.2em solid hsl(245, 32%, 8%);
+    border-top: none;
+    border-left: none;
+    transform: rotate(40deg) translate(-1em, 1em);
+}
+.eye::before {
+    content: '';
+    position: absolute;
+    background-color: hsl(20, 44%, 85%);
+    width: 3.29em;
+    height: 1.8em;
+    border-radius: 100px 100px 0 0;
+    transform: rotate(-40deg) translate(-0.48em, -0.19em);
+}
+.iris,
+.iris::before, 
+.iris::after {
+    position: absolute;
+    content: '';
+    width: 0.2em;
+    height: 0.4em;
+    background-color: hsl(245, 32%, 8%);
+    transform: translate(1.9em, 2.5em);
+    border-radius: 100%;
+}
+.iris::before {  
+    transform: rotate(45deg); 
+}
+.iris::after {  
+    transform: rotate(300deg); 
+}
+.nose {
+    width: 1.5em;
+    height: 2em;
+    background-color: hsl(20, 44%, 85%);
+    border-radius: 10em 10em 1000% 1000%;
+    border: 0.1em solid hsl(245, 32%, 8%);
+    transform: translate(-1.6em, -0.2em) rotate(15deg);
+    border-top: none;
+}
+.nose::before {
+    content:  '';
+    position: absolute;
+    width: 1.7em;
+    height: 1em;
+    background-color: hsl(20, 44%, 85%);
+}
+.mouth {
+    width: 5em;
+    height: 0em;
+    background-color: hsl(193, 89%, 85%);
+    border-radius: 7em 7em 1em 1em;
+    border: 0.2em solid hsl(245, 32%, 8%);
+    transform: translate(-1.25em, 1em) rotate(5deg);
+}
+.mouth::before {
+    content: '';
+    position: absolute;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: transparent;
+    border-radius: 100% 0 0 100%;
+    border: 0.1em solid hsl(245, 32%, 8%);
+    transform: translate(-0.5em, -0.45em);
+    border-right: none;
+}
+.mouth::after {
+    content: '';
+    position: absolute;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: transparent;
+    border-radius: 100% 0 0 100%;
+    border: 0.1em solid hsl(245, 32%, 8%);
+    transform: translate(4.25em, -0.45em) rotate(182deg);
+    border-right: none;
+}
+.hair {
+    position: fixed;
+    width: 11em;
+    height: 14.5em;
+    background-color: hsl(193, 89%, 85%);
+    border-radius: 5em;
+    transform: translate(-1em, -1em);
+    z-index: 1;
+}
+.hair-d {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+.hair-1 {
+    border-right: 100px solid hsl(193, 89%, 85%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: translate(-0.25em, 8.5em) rotate(-20deg);
+}
+.hair-2 {
+    border-right: 100px solid hsl(193, 89%, 85%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: translate(-1.25em, 7.5em) rotate(-15deg);
+}
+.hair-3 {
+    border-right: 100px solid hsl(193, 89%, 85%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: translate(-2.5em, 5.95em) rotate(5deg);
+}
+.hair-4 {
+    border-right: 100px solid hsl(193, 89%, 85%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: translate(-2.95em, 3.25em) rotate(5deg);
+}
+.hair-5 {
+    border-right: 100px solid hsl(193, 89%, 85%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: translate(-3.25em, -0.25em) rotate(20deg);
+}
+.hair-6 {
+    border-right: 150px solid hsl(193, 89%, 85%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: translate(-2.25em, -3em) rotate(45deg);
+}
+.hair-7 {
+    border-right: 150px solid hsl(193, 89%, 85%);
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    transform: translate(2.25em, -5em) rotate(100deg);
+}
+.hair-8 {
+    border-right: 150px solid hsl(193, 89%, 85%);
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    transform: translate(5em, -3em) rotate(135deg);
+}
+.hair-9 {
+    border-right: 150px solid hsl(193, 89%, 85%);
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    transform: translate(5.5em, 0em) rotate(175deg);
+}
+.hair-10 {
+    border-right: 150px solid hsl(193, 89%, 85%);
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    transform: translate(5em, 3em) rotate(180deg);
+}
+.hair-11 {
+    border-right: 100px solid hsl(193, 89%, 85%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: translate(6.75em, 7em) rotate(195deg);
+}
+.hair-12 {
+    border-right: 100px solid hsl(193, 89%, 85%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: translate(5.5em, 8.5em) rotate(195deg);
+}
+.topLeft {
+    transform: translate(1.3em, 2.1em);
+    transition: all 0.5s;
+}
+.topRight {
+    transform: translate(2.5em, 1em);
+    transition: all 0.5s;
+}
+.bottomLeft {
+    transform: translate(2.1em, 2.8em);
+    transition: all 0.5s;
+}
+.bottomRight {
+    transform: translate(2.5em, 2.1em);
+    transition: all 0.5s;
+}
